@@ -23,6 +23,9 @@ FROM openjdk:17-jdk
 # Set the working directory inside the container
 WORKDIR /app
 
+# Create logs directory
+RUN mkdir /app/logs
+
 # Copy the packaged jar file from the build stage
 COPY --from=build /app/target/myapp-0.0.1-SNAPSHOT.jar  /app/myapp-0.0.1-SNAPSHOT.jar
 
@@ -30,4 +33,4 @@ COPY --from=build /app/target/myapp-0.0.1-SNAPSHOT.jar  /app/myapp-0.0.1-SNAPSHO
 EXPOSE 8081
 
 # Run the application
-CMD ["java", "-jar", "myapp-0.0.1-SNAPSHOT.jar"]
+CMD ["sh" "-c" "java -jar myapp-0.0.1-SNAPSHOT.jar > /app/logs/app.log 2>&1"]
