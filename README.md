@@ -12,7 +12,7 @@ Run the following commands on both the master and worker nodes to prepare them f
  chmod +x kubectl
  mkdir -p ~/.local/bin
  mv ./kubectl ~/.local/bin/kubectl
- # and then append (or prepend) ~/.local/bin to $PATH
+ # And then append (or prepend) ~/.local/bin to $PATH
 
  kubectl version --client
 
