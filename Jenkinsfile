@@ -29,6 +29,7 @@ pipeline {
 
                   # deploy new JAR
                   echo "=== Starting deploy at $(date)" >> deploy.log
+                  JENKINS_NODE_COOKIE=dontKillMe
                   nohup java -jar target/myapp.jar > app.log 2>&1 &
                   echo "PID: $(pgrep -f myapp.jar)" >> deploy.log
                 '''
