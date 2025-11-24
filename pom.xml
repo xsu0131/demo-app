@@ -54,11 +54,11 @@
 	<distributionManagement>
     <repository>
       <id>team-synergistic-releases</id>
-      <url>http://13.53.245.9:8081/repository/team-synergistic-releases/</url>
+      <url>http://16.16.96.149:8081/repository/team-synergistic-releases/</url>
     </repository>
     <snapshotRepository>
       <id>team-synergistic-snapshots</id>
-      <url>http://13.53.245.9:8081/repository/team-synergistic-snapshots/</url>
+      <url>http://16.16.96.149:8081/repository/team-synergistic-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
